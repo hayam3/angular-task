@@ -1,0 +1,59 @@
+<section class=" flex fixed z-50 ">
+
+
+    <div  #sideNav   class="min-h-screen	w-0 py-10 bg-slate-200 overflow-hidden relative transition-all">
+
+
+<span  (click)="close()" class="right-2 top-1 absolute  font-medium"><i   class="fa-solid fa-xmark"></i></span>
+
+        <div class="mx-3 mb-10 "><img src="https://www.maids.cc/assets/images/logos/blue/Get-a-full-time-maid-or-a-maid-visa.svg?_v=20" alt="logo"></div>
+       
+        <div class=" my-5 mx-3  w-full   relative">
+            
+            <input type="search" class="outline-none rounded-full px-3 py-1 shadow-md "   placeholder="search for user...">
+            <span class="absolute top-1 text-slate-300 left-44"><i class="fa-solid fa-magnifying-glass"></i></span>
+          </div>
+
+
+          <div class="flex flex-col mt-10">
+            <li routerLink="userlist" class="list-none my-4 font-medium   hover:bg-white transition ps-2   ms-3 py-2   rounded-full shadow-md ">
+                <span class="pe-2 "><i class="fa-solid fa-users"></i></span>
+                <span>User List</span>
+               </li>
+            <li class="list-none my-4 font-medium   hover:bg-white transition ps-2   ms-3 py-2   rounded-full shadow-md ">
+                <span class="pe-2 "><i class="fa-solid fa-chart-pie"></i></span>
+                <span>Charts</span>
+               </li>
+              
+               <li class="list-none my-4 font-medium  hover:bg-white transition  ms-3  ps-2     rounded-full   py-2 shadow-md ">
+                <span class="pe-2"><i class="fa-solid fa-gear"></i></span>
+                <span>Setting</span>
+               </li>
+    
+               <li class="list-none my-4 font-medium  hover:bg-white transition   ms-3  ps-2    rounded-full   py-2 shadow-md">
+                <span class="pe-3"><i class="fa-solid fa-question"></i></span>
+                <span>Help</span>
+               </li>
+    
+    
+          </div>
+           
+
+
+          <div class="mt-16 ms-5 ">
+            <span class="p-3  mx-2 shadow-md rounded-full font-medium   hover:bg-white transition "><i class="fa-brands fa-linkedin"></i></span>
+            <span class="p-3  mx-2 shadow-md rounded-full font-medium  hover:bg-white transition " ><i class="fa-brands fa-github"></i></span>
+            <span class="p-3  mx-2 shadow-md rounded-full font-medium   hover:bg-white transition" ><i class="fa-brands fa-facebook"></i></span>
+          </div>
+       
+    </div>
+  
+ 
+  <span (click)="open()"  class="   text-3xl openNav	 px-5 bg-slate-200"><i class="  fa-solid fa-bars"></i></span>
+ 
+
+     
+    
+    
+   
+</section>

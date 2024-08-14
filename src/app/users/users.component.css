@@ -1,0 +1,4 @@
+.flip-scale-up-hor
+{
+    -webkit-animation:flip-scale-up-hor .5s linear both;animation:flip-scale-up-hor .5s linear both
+}

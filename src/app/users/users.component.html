@@ -1,0 +1,53 @@
+ <section class=" min-h-screen ps-10">
+    <div class="container mx-auto">
+        <h1 class=" flip-scale-up-hor uppercase text-center text-3xl font-medium text-orange-500	py-7 ">user List</h1>
+
+
+<div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-10 ms-10 gap-y-5 gap-x-5 relative">
+    @for (item of usersData; track $index) {
+        <div (click)="open()"  class="rounded-2xl shadow-xl py-10  hover:bg-slate-200 transition px-2 ">
+            <img [src]="item.avatar" class="rounded-full my-8 mx-auto" alt="user img">
+         
+
+           <div class="flex flex-col">
+            <span class=" font-black font-mono  hover:bg-orange-500 transition ps-2 mt-5   py-2   rounded-full shadow-md   ">User-ID:{{item.id}}</span>
+            <span class="font-black font-mono  hover:bg-orange-500 transition ps-2 mt-5   py-2   rounded-full shadow-md  ">First Name :{{item.first_name}}</span>
+            <span class="font-black font-mono  hover:bg-orange-500 transition ps-2 mt-5   py-2   rounded-full shadow-md  ">Last Name :{{item.last_name}}</span>
+            <span class="font-black font-mono  hover:bg-orange-500 transition ps-2 mt-5   py-2   rounded-full shadow-md  ">Email:{{item.email}}</span>
+           </div>
+        </div>
+
+
+
+    }
+
+   @for (user of usersData; track $index) {
+    @if  (isClicked==true) {
+        <div class=" bg-slate-950 bg-opacity-15 w-full h-full absolute top-0">
+         <div  class="  top-0 flex  absolute justify-center items-center gap-y-10 w-full h-full text-2xl  mx-auto     " >
+           <div>
+            <img [src]="user.avatar" class="rounded-full  uppercase mx-auto" alt="user img">
+    
+            <h3 class="py-5">First Name:{{user.first_name}}</h3>
+            <h3 class="py-5">Last Name:{{user.last_name}}</h3>
+            <h3 class="py-5">Email:{{user.email}}</h3>
+            <h3>User ID:{{user.id}}</h3>
+            <!-- <span class="text-xl font-mono  hover:bg-orange-500 transition ps-2 mt-5  ms-32 py-2   rounded-full shadow-md  px-5">User-ID:{{item.id}}</span> -->
+
+           </div>
+             <i (click)="close()" class="text-white right-0 top-8  absolute py-10 px-16 text-2xl fs-3 fa-solid fa-xmark"></i>
+         </div>
+        </div>
+        }
+   }
+
+
+
+        
+</div>
+
+
+
+    </div>
+    
+ </section>
